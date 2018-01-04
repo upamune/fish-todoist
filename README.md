@@ -2,6 +2,8 @@
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
+![](https://gyazo.com/4889d599165cf1f79474d74410ca5e21.gif)
+
 ## Table of Contents
 
 - [Install](#install)
@@ -25,10 +27,11 @@ $ fisher install upamune/t
 
 ## Usage
 
+You should bind `__todoist_actions` to key.
+
+*Example*
 ```
-$ todoist_add
-$ todoist_show
-$ todoist_close
+$ bind \ct '__todoist_actions'
 ```
 
 ## Maintainers
