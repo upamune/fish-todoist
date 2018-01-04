@@ -1,9 +1,9 @@
 #!/usr/bin/env fish
 
 function todoist_close
-  todoist list | fzf --reverse --header='CloseTask' -m | cut -d ' ' -f 1 | tr '\n' ' ' | read -l tasks
+  command todoist list | fzf --reverse --header='CloseTask' -m | cut -d ' ' -f 1 | tr '\n' ' ' | read -l tasks
   
-  set cmd "todoist close "
+  set cmd "command todoist close "
   if [ (string length "$tasks") -ne 0 ]
       set cmd "$cmd""$tasks"
       echo $cmd

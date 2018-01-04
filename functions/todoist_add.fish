@@ -2,11 +2,11 @@
 
 function todoist_add
   seq 4 | fzf --reverse --header='AddTask:Priority' | read priority
-  todoist labels | fzf --reverse --header='AddTask:Label' -m | cut -d ' ' -f 1 | tr '\n' ',' | sed -e 's/,$//' | read labels
-  todoist projects | fzf --reverse --header='AddTask:Project' | head -n1 | cut -d ' ' -f 1 | read project
+  command todoist labels | fzf --reverse --header='AddTask:Label' -m | cut -d ' ' -f 1 | tr '\n' ',' | sed -e 's/,$//' | read labels
+  command todoist projects | fzf --reverse --header='AddTask:Project' | head -n1 | cut -d ' ' -f 1 | read project
   set date_str 'today'
   
-  set cmd 'todoist add '
+  set cmd 'command todoist add '
   
   if [ (string length "$priority") -eq 1 ]
       set cmd "$cmd""--priority $priority "
