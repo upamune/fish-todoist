@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-function todoist_show
+function __todoist_show
   command todoist list | fzf --reverse --header='ShowTask' +m | cut -d ' ' -f 1 | tr '\n' ' ' | read -l tasks
   
   set cmd "command todoist show "
