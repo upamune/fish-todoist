@@ -3,11 +3,11 @@
 function __todoist_add
   get --prompt="Enter a task name:> " | read -l task
   seq 4 | fzf --reverse --header='AddTask:Priority' | read -l priority
-  todoist labels | fzf --reverse --header='AddTask:Label' -m | cut -d ' ' -f 1 | tr '\n' ',' | sed -e 's/,$//' | read -l labels
-  todoist projects | fzf --reverse --header='AddTask:Project' | head -n1 | cut -d ' ' -f 1 | read -l project
+  command todoist labels | fzf --reverse --header='AddTask:Label' -m | cut -d ' ' -f 1 | tr '\n' ',' | sed -e 's/,$//' | read -l labels
+  command todoist projects | fzf --reverse --header='AddTask:Project' | head -n1 | cut -d ' ' -f 1 | read -l project
   set date_str 'today'
   
-  set cmd 'todoist add '
+  set -l cmd 'todoist add '
   
   if [ (string length "$priority") -eq 1 ]
       set cmd "$cmd""--priority $priority "
