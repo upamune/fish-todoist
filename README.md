@@ -14,6 +14,7 @@
 
 ### Dependency
 
+* [sachaos/todoist: Todoist CLI Client\. I ❤️ Todoist and CLI\.](https://github.com/sachaos/todoist)
 * [junegunn/fzf: A command\-line fuzzy finder](https://github.com/junegunn/fzf)
 
 ### Fisherman
