@@ -5,7 +5,9 @@ function __todoist_add
   seq 4 | fzf --reverse --header='AddTask:Priority' | read -l priority
   command todoist labels | fzf --reverse --header='AddTask:Label' -m | cut -d ' ' -f 1 | tr '\n' ',' | sed -e 's/,$//' | read -l labels
   command todoist projects | fzf --reverse --header='AddTask:Project' | head -n1 | cut -d ' ' -f 1 | read -l project
-  set date_str 'today'
+  for i in (seq 0 14)
+    command date --date="+$i day" +'%Y/%m/%d (%a)'
+  end | fzf --reverse --header='AddTask:Date' | cut -d ' ' -f 1 | read -l date_str
   
   set -l cmd 'todoist add '
 
