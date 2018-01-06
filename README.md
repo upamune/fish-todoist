@@ -2,7 +2,7 @@
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-![](https://gyazo.com/cdd40581b08bcf3c26f64154a6466ba4.gif)
+![]()
 
 ## Table of Contents
 
