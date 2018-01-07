@@ -1,4 +1,4 @@
-# t
+# fish-todoist
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
@@ -22,7 +22,7 @@
 ### Fisherman
 
 ```bash
-$ fisher install upamune/t
+$ fisher install upamune/fish-todoist
 ```
 
 ## Usage
