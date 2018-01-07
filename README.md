@@ -27,12 +27,7 @@ $ fisher install upamune/fish-todoist
 
 ## Usage
 
-You should bind `__todoist_actions` to key.
-
-*Example*
-```
-$ bind \ct '__todoist_actions'
-```
+`Ctrl-t` : `__todoist_actions`
 
 ## Maintainers
 
